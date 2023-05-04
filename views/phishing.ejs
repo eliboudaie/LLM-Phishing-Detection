@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #6c757d;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #212529;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phishing Detection</h1>
+        <p>Enter the email address and the body of the email to perform phishing detection:</p>
+        <form action="/phishing/detect" method="POST">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="body" class="form-label">Email Body</label>
+            <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
